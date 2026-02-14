@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Resolve</title>
+    <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body>
 
+    <header>
+        <div class="nav-left">
+            <div class="logo">
+                <span>❖</span> Civic Resolve
+            </div>
+            <nav class="nav-links">
+                <a href="#">Submit Complaint</a>
+                <a href="#">Dashboard</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <div class="profile-dropdown">
+                <button onclick="toggleProfile()" class="profile-btn">
+                    <img src="dp-boy.jpeg" alt="Profile" class="avatar">
+                    <span>John Doe</span> ⌄
+                </button>
+                
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="dropdown-header">
+                        <p class="user-name">John Doe</p>
+                        <p class="user-email">john.doe@example.com</p>
+                    </div>
+                    <a href="#">👤 My Profile</a>
+                    <a href="#">⚙️ Settings</a>
+                    <a href="#">🐞 Report Issue</a>
+                    <hr>
+                    <a href="#" class="logout">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A better community starts with you</h1>
+            <p>Civic Resolve helps you report and track local issues like broken streetlights and water leaks. Your reports make a difference.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Submit a Complaint &rarr;</a>
+                <a href="#" class="btn-secondary">Track Your Complaints</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Wb-Ant.jpg" alt="Nature Ant Image">
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">A Simple Path to Resolution</h2>
+        <p class="section-subtitle">Our streamlined process ensures your concerns are heard and handled efficiently.</p>
+
+        <div class="steps-grid">
+            <div class="step-item">
+                <h3>1. Submit</h3>
+                <p>Fill out a simple form with the issue's details and location. Add a photo if you can.</p>
+            </div>
+            <div class="step-item">
+                <h3>2. Track</h3>
+                <p>Receive a tracking ID and monitor the progress of your complaint in real-time from your dashboard.</p>
+            </div>
+            <div class="step-item">
+                <h3>3. Resolve</h3>
+                <p>Get notified when the issue is resolved. You can then provide feedback on the service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Designed for Community Engagement</h2>
+        <p class="section-subtitle">Key features that make reporting issues and tracking their resolution seamless.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-img-container">
+                    <img src="Wb-telephonw.jpg" alt="Telephone">
+                </div>
+                <div class="feature-content">
+                    <h3>Easy Submission</h3>
+                    <p>Quickly submit complaints with our intuitive form.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-img-container">
+                    <img src="Wb-maps.jpg" alt="Dashboard">
+                </div>
+                <div class="feature-content">
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor the status of your complaints live from your dashboard.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-img-container">
+                    <img src="Wb-updates.jpg" alt="Person">
+                </div>
+                <div class="feature-content">
+                    <h3>Get Notified</h3>
+                    <p>Receive updates via SMS or email as your complaint is processed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* Toggle between hiding and showing the dropdown content */
+        function toggleProfile() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    
+        /* Close the dropdown if the user clicks outside of it */
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-btn') && !event.target.closest('.profile-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
